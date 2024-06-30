@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fonts6/css/all.css">
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgba(50, 50, 50, 0.75), rgba(0, 0, 0, 0.75)),url('tanker.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        body {
+  font-family: "Lato", sans-serif;
+}
+
+
+        .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fefefe;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: indigo;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+}
+
+
+
+.openbtn {
+  font-size: 33px;
+  cursor: pointer;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  background-color: white;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.topnav {
+    background-color: #ffffff;
+    overflow: auto;
+    margin-left: -5px;
+    width: 1280px;
+    margin-top: -8px;
+    position: fixed;
+    margin-left: -10px;
+      
+}
+
+.image {
+    height: 50px;
+    width: 260px;
+    margin-left: 5px;   
+}
+
+.search {
+  width: 220px;
+  height: 25px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 100px;
+  border: 2px solid black;
+  font-family: lato;
+}
+
+.div4 {
+  width: 250px;
+  height: 160px;
+  background-color: #444;
+  margin-top: -60px;
+  background-image: linear-gradient(#4B91f1, black, #ff9700);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  height: 150px;
+  width: 200px;
+  background-color: rgb(253, 128, 149);
+  color: white;
+  border-radius: 5px;
+  margin-left: 70px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn1 {
+  height: 150px;
+  width: 200px;
+  background-color: rgb(24, 130, 250);
+  color: white;
+  border-radius: 5px;
+  margin-left: 70px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn2 {
+  height: 150px;
+  width: 200px;
+  background-color: rgb(255, 147, 31);
+  color: white;
+  border-radius: 5px;
+  margin-left: 70px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.tanker{
+  height: 200px;
+  width: 500px;
+
+}
+
+
+</style>
+
+<body>
+    <head>
+        <div class="topnav">
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">☰</button>  
+                <img src="national-gas-logo.png" class="image">
+               
+              </div>
+
+              
+
+            
+         </div>
+         </head>
+
+
+         <br><br><br><br><br><br><br>
+
+         
+
+         <br><br>
+
+         
+         <button class="btn"><i class="fa fa-user"></i> Customers</button>
+         <button class="btn1"><i class="fa fa-users"></i> Employees</button>
+         <button class="btn2"> <i class="fa fa-bank"></i> Agencies</button>
+
+        
+           
+        
+        <div id="mySidebar" class="sidebar">
+            <div class="div4"> 
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> 
+            <input type="text" placeholder="Search" class="search" >
+            </div>
+            </br>
+            
+            
+            <a href="#">Home</a>
+            <a href="#">Contact us</a>
+            <a href="#">Careers</a>
+            <a href="#">About us</a>
+            <a href="#" >Account</a>
+            <a href="#">Sign Out</a>
+
+        </div>
+
+        
+        
+        <script>
+            function openNav() {
+              document.getElementById("mySidebar").style.width = "250px";
+              document.getElementById("main").style.marginLeft= "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidebar").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+
+        </script>
+
+</html>
