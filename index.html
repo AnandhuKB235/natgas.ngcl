@@ -179,6 +179,51 @@
 
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 450px;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    overflow-x: hidden;
+    margin-left: 70px;
+}
+
+.grid {
+    display: flex;
+    width: 500px;
+    flex: 1;
+    max-height: 500px;
+    overflow-x: scroll;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+    max-width: 210px;
+    max-height: 310px;
+    padding: 8px;
+    margin: 0 4px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.item-image img {
+    max-width: 100%;
+}
+
 @media screen and (max-width: 450px) {
     .btn, .btn1, .btn2, .btn3{
         height: 100px;
@@ -247,7 +292,76 @@
 
         </div>
 
-        
+        <main>
+          <h2>Our Products</h2>
+          <div class="grid">
+              <div class="item">
+                  <div class="item-image">
+                      <img src="cooking.jpg" alt="">
+                  </div>
+                  <div class="item-content">
+                      <h4 class="item-content-title">
+                          Piped Natural Gas (PNG)
+                      </h4>
+                      <p class="item-content-description">
+                          Leading in domestic supply of natural gas, igniting happiness across homes.
+                      </p>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="item-image">
+                      <img src="pipeline.jpg" alt="">
+                  </div>
+                  <div class="item-content">
+                      <h4 class="item-content-title">
+                          Liquified Natural Gas (LNG)
+                      </h4>
+                      <p class="item-content-description">
+                        Leaders in industrial supply of natural gas, fuelling economic growth and prosperity.
+                      </p>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="item-image">
+                      <img src="tanker.jpg" alt="">
+                  </div>
+                  <div class="item-content">
+                      <h4 class="item-content-title">
+                          Liquified Petroleum Gas (LPG)
+                      </h4>
+                      <p class="item-content-description">
+                          Major supplier of LPG across regions, powering progress.
+                      </p>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="item-image">
+                      <img src="cng.jpg" alt="">
+                  </div>
+                  <div class="item-content">
+                      <h4 class="item-content-title">
+                          Compressed Natural Gas (CNG)
+                      </h4>
+                      <p class="item-content-description">
+                          Largest supplier of CNG to automobile sector, keeping your wheels running.
+                      </p>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="item-image">
+                      <img src="cbg.jpg" alt="">
+                  </div>
+                  <div class="item-content">
+                      <h4 class="item-content-title">
+                          Compressed Bio Gas (CBG)
+                      </h4>
+                      <p class="item-content-description">
+                        Leading suppliers of CBG, transforming waste into enegry, for a cleaner planet.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </main>
         
         <script>
             function openNav() {
