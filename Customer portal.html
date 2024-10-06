@@ -360,9 +360,10 @@ color: white;
 </div>
 
 <div id="popup-container1">
+    <div id="close-btn" onclick="closesubPopup()"><b>X</b></div>
     <h2 style="font-family: lato; font-size: 18px; color: #191970;">Apply for new connection?</h2><br>
+    <button>Cancel</button>&nbsp;&nbsp;
     <button>Proceed</button>
-    <button>Cancel</button>
   
     
 </div>
@@ -396,6 +397,8 @@ color: white;
     function opensubPopup() {
         document.getElementById('popup-container1').style.display = 'block' ;
         document.getElementById('overlay1').style.display = 'block' ;
+        document.getElementById('popup-container').style.ddisplay = 'none';
+        document.getElementById('overlay').style.display = 'none' ;
     }
 
     function closesubPopup() {
