@@ -227,6 +227,7 @@ color: white;
         font-size: 16px;
     }
 }
+
 </style>
 
 <body>
@@ -269,10 +270,18 @@ color: white;
 
         </div>
 
+        <div id="overlay"></div>
+
+<div id="popup-container">
+    <div id="close-btn" onclick="closePopup()">X</div>
+    <h2 style="font-family: lato; font-size: 20px; color: red;">Reservation Not Available</h2>
+    <!-- Add your content here -->
+</div>
+
 
         <button class="btn1"><b>Payments</b>&nbsp;<i class="fa-solid fa-coins"></i></button>
         <button class="btn2"><b>e-KYC</b>&nbsp;<i class="fa-solid fa-file-circle-check"></i></button><br><br>
-        <button class="btn3"><b>Download bill</b>&nbsp;<i class="fa-solid fa-file-invoice"></i></button>
+        <button class="btn3" onclick="openPopup()"><b>Download bill</b>&nbsp;<i class="fa-solid fa-file-invoice"></i></button>
         <button class="btn4"><b>Connections</b>&nbsp;<i class="fa-solid fa-id-card"></i></button><br><br>
         <button class="btn5"><b>Customer care</b>&nbsp;<i class="fa-solid fa-headset"></i></button>
 <script>
@@ -285,6 +294,16 @@ color: white;
               document.getElementById("mySidebar").style.width = "0";
               document.getElementById("main").style.marginLeft= "0";
             }
+
+            function openPopup() {
+        document.getElementById('popup-container').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('popup-container').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
 
         </script>
 
