@@ -295,6 +295,48 @@ color: white;
             right: 10px;
             cursor: pointer;
         }
+
+#popup-container2 {
+
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        #close-btn2 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+#popup-container3 {
+
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        #close-btn3 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
 </style>
 
 <body>
@@ -343,7 +385,7 @@ color: white;
     <div id="close-btn" onclick="closePopup()"><b>X</b></div>
     <h2 style="font-family: lato; font-size: 18px; color: #191970;">Select option</h2><br>
     <button class="btnpp1" onclick="opensubPopup()">New</button><br><br>
-    <button class="btnpp1">Existing</button><br><br>
+    <button class="btnpp1" onclick="opesubPopup1()">Existing</button><br><br>
     <button class="btnpp1">Cancel</button>
     <!-- Add your content here -->
 </div>
@@ -351,8 +393,17 @@ color: white;
 <div id="popup-container1">
     <div id="close-btn" onclick="closesubPopup()"><b>X</b></div>
     <h2 style="font-family: lato; font-size: 18px; color: #191970;">Apply for new connection?</h2><br>
-    <button style="border-radius: 2px; background-color: white; color:#191970; border: 1px solid #191970;">Cancel</button>&nbsp;&nbsp;
-    <button style="border-radius: 2px; background-color: #191970; color: white; border: none;">Proceed</button>
+    <button style="width:25px; length:75px; border-radius: 2px; background-color: white; color:#191970; border: 1px solid #191970;">Cancel</button>&nbsp;&nbsp;
+    <button style="width:25px; length:75px; border-radius: 2px; background-color: #191970; color: white; border: none;">Proceed</button>
+  
+    
+</div>
+
+<div id="popup-container2">
+    <div id="close-btn" onclick="closesubPopup1()"><b>X</b></div>
+    <h2 style="font-family: lato; font-size: 18px; color: #191970;">Link existing connection?</h2><br>
+    <button style="width:25px; length:75px; border-radius: 2px; background-color: white; color:#191970; border: 1px solid #191970;">Cancel</button>&nbsp;&nbsp;
+    <button style="width:25px; length:75px; border-radius: 2px; background-color: #191970; color: white; border: none;">Proceed</button>
   
     
 </div>
@@ -391,6 +442,17 @@ color: white;
 
     function closesubPopup() {
         document.getElementById('popup-container1').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+
+    function opensubPopup1() {
+        document.getElementById('popup-container2').style.display = 'block' ;
+        document.getElementById('overlay').style.display = 'block' ;
+        document.getElementById('popup-container').style.display = 'none';
+    }
+
+    function closesubPopup1() {
+        document.getElementById('popup-container2').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
     }
 
