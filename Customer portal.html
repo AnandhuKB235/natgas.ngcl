@@ -393,8 +393,8 @@ color: white;
 <div id="popup-container1">
     <div id="close-btn" onclick="closesubPopup()"><b>X</b></div>
     <h2 style="font-family: lato; font-size: 18px; color: #191970;">Apply for new connection?</h2><br>
-    <button style="width:75px; length:175px; border-radius: 2px; background-color: white; color:#191970; border: 1px solid #191970;">Cancel</button>&nbsp;&nbsp;
-    <button style="width:75px; length:175px; border-radius: 2px; background-color: #191970; color: white; border: none;">Proceed</button>
+    <button style="width:75px; length:160px; border-radius: 2px; background-color: white; color:#191970; border: 1px solid #191970;">Cancel</button>&nbsp;&nbsp;
+    <button style="width:75px; length:160px; border-radius: 2px; background-color: #191970; color: white; border: none;">Proceed</button>
   
     
 </div>
@@ -402,12 +402,19 @@ color: white;
 <div id="popup-container2">
     <div id="close-btn" onclick="closesubPopup1()"><b>X</b></div>
     <h2 style="font-family: lato; font-size: 18px; color: #191970;">Link existing connection?</h2><br>
-    <button style="width:50px; length:125px; border-radius: 2px; background-color: white; color:#191970; border: 1px solid #191970;">Cancel</button>&nbsp;&nbsp;
-    <button style="width:50px; length:125px; border-radius: 2px; background-color: #191970; color: white; border: none;">Proceed</button>
+    <button style="width:75px; length:160px; border-radius: 2px; background-color: white; color:#191970; border: 1px solid #191970;">Cancel</button>&nbsp;&nbsp;
+    <button style="width:75px; length:160px; border-radius: 2px; background-color: #191970; color: white; border: none;">Proceed</button>
   
     
 </div>
-
+<div id="popup-container3">
+    <div id="close-btn" onclick="closesubPopup2()"><b>X</b></div>
+    <h2 style="font-family: lato; font-size: 18px; color: #191970;">Cancel existing connection?</h2><br>
+    <button style="width:75px; length:160px; border-radius: 2px; background-color: white; color:#191970; border: 1px solid #191970;">Cancel</button>&nbsp;&nbsp;
+    <button style="width:75px; length:160px; border-radius: 2px; background-color: #191970; color: white; border: none;">Proceed</button>
+  
+    
+</div>
         <button class="btn1"><b>Payments</b>&nbsp;<i class="fa-solid fa-coins"></i></button>
         <button class="btn2"><b>e-KYC</b>&nbsp;<i class="fa-solid fa-file-circle-check"></i></button><br><br>
         <button class="btn3"><b>Download bill</b>&nbsp;<i class="fa-solid fa-file-invoice"></i></button>
@@ -455,6 +462,17 @@ color: white;
         document.getElementById('popup-container2').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
     }
+
+   function opensubPopup2() {
+        document.getElementById('popup-container3').style.display = 'block' ;
+        document.getElementById('overlay').style.display = 'block' ;
+        document.getElementById('popup-container').style.display = 'none';
+    }
+
+    function closesubPopup2() {
+        document.getElementById('popup-container3').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    } 
 
         </script>
 
