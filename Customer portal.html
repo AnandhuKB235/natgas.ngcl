@@ -287,7 +287,7 @@ color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             z-index: 1000;
             border-radius: 5px;
-            height: 100px;
+            height: 130px;
         
         }
 
@@ -310,7 +310,7 @@ color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             z-index: 1000;
             border-radius: 5px;
-            
+            height: 130px;
         }
 
         #close-btn2 {
@@ -332,7 +332,7 @@ color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             z-index: 1000;
             border-radius: 5px;
-            
+            height: 130px;
         }
 
         #close-btn3 {
@@ -427,14 +427,14 @@ color: white;
 <div id="popup-container2">
     <div id="close-btn" onclick="closesubPopup1()"><b>X</b></div>
     <h2 style="font-family: lato; font-size: 19px; color: #191970;">Link existing connection?</h2><br>
-    <button class="btnpp2";>Cancel</button>
+    <button class="btnpp2" onclick="closeppcancel2()";>Cancel</button>
     <button class="btnpp3";>Proceed</button>
     
 </div>
 <div id="popup-container3">
     <div id="close-btn" onclick="closesubPopup2()"><b>X</b></div>
     <h2 style="font-family: lato; font-size: 19px; color: #191970;">Cancel existing connection?</h2><br>
-    <button class="btnpp2";>Cancel</button>
+    <button class="btnpp2" onclick="closeppcancel3()";>Cancel</button>
     <button class="btnpp3";>Proceed</button>
     
 </div>
@@ -499,6 +499,18 @@ color: white;
 
     function closeppcancel1() {
         document.getElementById('popup-container1').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+        
+    }
+
+    function closeppcancel2() {
+        document.getElementById('popup-container2').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+        
+    }
+
+    function closeppcancel3() {
+        document.getElementById('popup-container3').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
         
     }
