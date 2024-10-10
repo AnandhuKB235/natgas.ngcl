@@ -364,6 +364,28 @@ color: white;
     margin-left: 100px;
     transform: translateY(-50px);
 }
+
+#popup-container4 {
+
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            border-radius: 5px;
+            height: 160px;
+        }
+
+        #close-btn4 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
 </style>
 
 <body>
@@ -397,12 +419,12 @@ color: white;
             </br>
             
             
-            <a href="index.html">Home</a>
+            
             <a href="#">Contact us</a>
             <a href="#">Careers</a>
             <a href="#">About us</a>
             <a href="#" >Account</a>
-            <a href="#">Sign Out</a>
+            <a onclick="signout()">Sign Out</a>
 
         </div>
 
@@ -433,6 +455,13 @@ color: white;
     
 </div>
 <div id="popup-container3">
+    <div id="close-btn" onclick="closesubPopup2()"><b>X</b></div>
+    <h2 style="font-family: lato; font-size: 18px; color: #191970;">Sign out from account?</h2><br>
+    <button class="btnpp2" onclick="signout2()";>Cancel</button>
+    <button class="btnpp3"; onclick="signout3()";>Proceed</button>
+    
+</div>
+<div id="popup-container4">
     <div id="close-btn" onclick="closesubPopup2()"><b>X</b></div>
     <h2 style="font-family: lato; font-size: 18px; color: #191970;">Cancel existing connection?</h2><br>
     <button class="btnpp2" onclick="closeppcancel3()";>Cancel</button>
@@ -514,6 +543,23 @@ color: white;
         document.getElementById('popup-container3').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
         
+    }
+
+    function signout() {
+        document.getElementById('popup-container4').style.display = 'block';
+        document.getElementById('overlay').style.display ='block'
+    }
+
+    function signout2() {
+        document.getElementById('popup-container4').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none' ;
+    }
+
+    function signout3() {
+        document.getElementById('popup-container4').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none' ;
+        window.location.href = 'index.html' ;
+
     }
 
         </script>
