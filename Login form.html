@@ -74,6 +74,7 @@
                 document.getElementById('message').textContent = 'Login successful!';
                 // Redirect to another page or do something after successful login
                  window.location.href='Customer portal.html'; // Example redirection
+                 sessionStorage.clear();
             } else {
                 document.getElementById('message').textContent = 'Invalid username or password!';
             }
