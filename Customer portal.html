@@ -558,8 +558,9 @@ color: white;
     function signout3() {
         document.getElementById('popup-container4').style.display = 'none';
         document.getElementById('overlay').style.display = 'none' ;
+        sessionStorage.clear();     
         window.location.replace('index.html');
-        sessionStorage.clear();
+        
 
     }
 
