@@ -64,14 +64,14 @@
 
     <script>
         function login() {
-            const username = document.getElementById('agency id').value;
+            const agencyid = document.getElementById('agency id').value;
             const password = document.getElementById('password').value;
 
             // Hardcoded credentials
             const validagencyid = 'heisenberg';
             const validPassword = 'admin123';
 
-            if (agency id ===validagencyid && password === validPassword) {
+            if (agencyid ===validagencyid && password === validPassword) {
                 document.getElementById('message').style.color = 'green';
                 document.getElementById('message').textContent = 'Login successful!';
                 // Redirect to another page or do something after successful login
