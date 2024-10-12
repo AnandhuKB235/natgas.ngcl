@@ -58,7 +58,11 @@
         <button onclick="login()">Login</button>
         
         <p id="message" style="color:red;"></p>
+        <br>
+        <a href="#">Forgot password/username</a>
+        <a href="#">Create Account</a>
     </div>
+    
 
     <script>
         function login() {
@@ -74,7 +78,9 @@
                 document.getElementById('message').textContent = 'Login successful!';
                 // Redirect to another page or do something after successful login
                  window.location.href='Customer portal.html'; // Example redirection
+                 console.log(sessionStorage);
                  sessionStorage.clear();
+                 console.log(sessionStorage);
             } else {
                 document.getElementById('message').textContent = 'Invalid username or password!';
             }
