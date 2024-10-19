@@ -446,7 +446,7 @@ color: white;
     <div id="close-btn" onclick="closesubPopup()"><b>X</b></div>
     <h2 style="font-family: lato; font-size: 18px; color: #191970;">Apply for new connection?</h2><br>
     <button class="btnpp2" onclick="closeppcancel1()">Cancel</button>
-    <button class="btnpp3">Proceed</button>
+    <button class="btnpp3" onclick="newconnection()>Proceed</button>
     
 </div>
 
@@ -569,6 +569,9 @@ color: white;
 
     }
 
+    function newconnection() {
+        window.location.href('New-connection.html');
+    }
     
 if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
     window.location.href = "Login form.html";  // Redirect to login page after pressing back
