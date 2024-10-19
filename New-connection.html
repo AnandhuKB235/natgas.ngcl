@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Input Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, select {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Input Form</h1>
+        <form id="inputForm">
+            <label for="formType">Select Form Type:</label>
+            <select id="formType" name="formType" onchange="changeForm()">
+                <option value="DMC-01">FORM DMC-01: DOMESTIC</option>
+                <option value="CMC-01">FORM CMC-01: COMMERCIAL</option>
+            </select>
+
+            <!-- Domestic Form Fields -->
+            <div id="domesticForm" class="form-section">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="houseNumber">House/Apartment No./Name:</label>
+                <input type="text" id="houseNumber" name="houseNumber" required>
+
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+
+                <label for="city">Town/City/Village:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="district">District:</label>
+                <input type="text" id="district" name="district" required>
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Commercial Form Fields -->
+            <div id="commercialForm" class="form-section hidden">
+                <label for="enterpriseName">Name of Enterprise:</label>
+                <input type="text" id="enterpriseName" name="enterpriseName" required>
+
+                <label for="regAddress">Registered Address:</label>
+                <input type="text" id="regAddress" name="regAddress" required>
+
+                <label for="commercialPhone">Phone Number:</label>
+                <input type="tel" id="commercialPhone" name="commercialPhone" required>
+
+                <label for="commercialEmail">Email:</label>
+                <input type="email" id="commercialEmail" name="commercialEmail" required>
+
+                <label for="industrialId">Commercial/Industrial ID:</label>
+                <input type="text" id="industrialId" name="industrialId" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function changeForm() {
+            const formType = document.getElementById("formType").value;
+            const domesticForm = document.getElementById("domesticForm");
+            const commercialForm = document.getElementById("commercialForm");
+
+            if (formType === "DMC-01") {
+                domesticForm.classList.remove("hidden");
+                commercialForm.classList.add("hidden");
+            } else {
+                domesticForm.classList.add("hidden");
+                commercialForm.classList.remove("hidden");
+            }
+        }
+    </script>
+</body>
+</html>
