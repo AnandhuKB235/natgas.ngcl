@@ -23,7 +23,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container";>
         <h2>Link existing connection</h2>
         <label for="mobileNumber" id="text";>Enter Registered Mobile Number:</label>
         <input type="text" id="mobileNumber" placeholder="Mobile Number">
@@ -70,6 +70,13 @@
             } else {
                 consumerDataDiv.innerHTML = `<p>No consumer found for this mobile number.</p>`;
             }
+        }
+
+        function linkconfirm() {
+            document.getElementById("container").style.display='none';
+            consumerDataDiv.innerHTML =
+                <h4>Link Successful!</h4>
+            ;
         }
     </script>
 </body>
