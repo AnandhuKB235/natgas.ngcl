@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Data Lookup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label, input, button {
+            display: block;
+            margin: 10px 0;
+        }
+        #consumerData {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Consumer Data Lookup</h2>
+        <label for="mobileNumber">Enter Registered Mobile Number:</label>
+        <input type="text" id="mobileNumber" placeholder="Mobile Number">
+        <button onclick="lookupConsumerData()">Get Consumer Data</button>
+
+        <div id="consumerData"></div>
+    </div>
+
+    <script>
+        // Sample data to simulate registered consumer details
+        const consumers = {
+            "9876543210": {
+                name: "John Doe",
+                consumerNumber: "C12345",
+                fuelType: "LPG",
+                connectionType: "Domestic"
+            },
+            "9123456789": {
+                name: "Jane Smith",
+                consumerNumber: "C67890",
+                fuelType: "PNG",
+                connectionType: "Commercial"
+            }
+        };
+
+        // Function to display consumer data
+        function lookupConsumerData() {
+            const mobileNumber = document.getElementById("mobileNumber").value;
+            const consumerDataDiv = document.getElementById("consumerData");
+
+            if (consumers[mobileNumber]) {
+                const consumer = consumers[mobileNumber];
+                consumerDataDiv.innerHTML = `
+                    <h3>Consumer Details</h3>
+                    <p><strong>Name:</strong> ${consumer.name}</p>
+                    <p><strong>Consumer Number:</strong> ${consumer.consumerNumber}</p>
+                    <p><strong>Fuel Type:</strong> ${consumer.fuelType}</p>
+                    <p><strong>Connection Type:</strong> ${consumer.connectionType}</p>
+                `;
+            } else {
+                consumerDataDiv.innerHTML = `<p>No consumer found for this mobile number.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
