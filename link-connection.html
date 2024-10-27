@@ -65,7 +65,7 @@
                     <p><strong>Consumer Number:</strong> ${consumer.consumerNumber}</p>
                     <p><strong>Fuel Type:</strong> ${consumer.fuelType}</p>
                     <p><strong>Connection Type:</strong> ${consumer.connectionType}</p>
-                    <button>Confirm</button>
+                    <button onclick="linkconfirm()";>Confirm</button>
                 `;
             } else {
                 consumerDataDiv.innerHTML = `<p>No consumer found for this mobile number.</p>`;
@@ -73,10 +73,11 @@
         }
 
         function linkconfirm() {
-            document.getElementById("container").style.display='none';
-            consumerDataDiv.innerHTML =
-                <h4>Link Successful!</h4>
-            ;
+    const consumerDataDiv = document.getElementById("consumerData");
+    document.getElementById("container").style.display = 'none';
+    consumerDataDiv.innerHTML = `
+        <h4>Link Successful!</h4>
+    `;
         }
     </script>
 </body>
