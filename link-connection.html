@@ -32,6 +32,8 @@
         <div id="consumerData"></div>
     </div>
 
+    <div id=message"></div>
+
     <script>
         // Sample data to simulate registered consumer details
         const consumers = {
@@ -73,9 +75,9 @@
         }
 
         function linkconfirm() {
-    const consumerDataDiv = document.getElementById("consumerData");
+    const consumerDataDiv = document.getElementById("message");
     document.getElementById("container").style.display = 'none';
-    consumerDataDiv.innerHTML = `
+    messageDiv.innerHTML = `
         <h4>Link Successful!</h4>
     `;
         }
