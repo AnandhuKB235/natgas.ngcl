@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Panel - Category Agency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li button {
+            background-color: #666;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        nav ul li button:hover {
+            background-color: #888;
+        }
+
+        .content-section {
+            display: none;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Administrator Panel - Category Agency</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><button onclick="showSection('addApplication')">Add Application</button></li>
+            <li><button onclick="showSection('cancelApplication')">Cancel Application</button></li>
+            <li><button onclick="showSection('viewPending')">View Pending Applications</button></li>
+            <li><button onclick="showSection('viewApproved')">View Approved Applications</button></li>
+            <li><button onclick="showSection('viewRejected')">View Rejected Applications</button></li>
+            <li><button onclick="showSection('registerComplaint')">Register Complaint</button></li>
+        </ul>
+    </nav>
+
+    <section id="addApplication" class="content-section">
+        <h2>Add Application</h2>
+        <form id="addAppForm">
+            <label for="applicantName">Applicant Name:</label>
+            <input type="text" id="applicantName" required>
+            <label for="applicantDetails">Application Details:</label>
+            <textarea id="applicantDetails" required></textarea>
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <section id="cancelApplication" class="content-section">
+        <h2>Cancel Application</h2>
+        <form id="cancelAppForm">
+            <label for="appId">Application ID:</label>
+            <input type="text" id="appId" required>
+            <button type="submit">Cancel Application</button>
+        </form>
+    </section>
+
+    <section id="viewPending" class="content-section">
+        <h2>Pending Applications</h2>
+        <ul id="pendingApplications"></ul>
+    </section>
+
+    <section id="viewApproved" class="content-section">
+        <h2>Approved Applications</h2>
+        <ul id="approvedApplications"></ul>
+    </section>
+
+    <section id="viewRejected" class="content-section">
+        <h2>Rejected Applications</h2>
+        <ul id="rejectedApplications"></ul>
+    </section>
+
+    <section id="registerComplaint" class="content-section">
+        <h2>Register Complaint</h2>
+        <form id="complaintForm">
+            <label for="consumerName">Consumer Name:</label>
+            <input type="text" id="consumerName" required>
+            <label for="complaintDetails">Complaint Details:</label>
+            <textarea id="complaintDetails" required></textarea>
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+            
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Form submissions (you can later integrate with Python back-end)
+        document.getElementById('addAppForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Application submitted!');
+            // Here, you can add the code to send data to your server
+        });
+
+        document.getElementById('cancelAppForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Application cancelled!');
+            // Here, you can add the code to handle the cancellation
+        });
+
+        document.getElementById('complaintForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Complaint submitted!');
+            // Here, you can add the code to handle complaints
+        });
+    </script>
+</body>
+</html>
